@@ -1,0 +1,588 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.navbar-container{
+    top: 0;
+    color: white;
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+    z-index: 1000;
+    background-color: black;
+}
+
+.logo{
+    width: 6%;
+    height: 6%;
+}
+
+.mail{
+    margin: auto 2em;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: larger;
+    color: white;
+    transition: color 0.3s ease;
+    margin-right: 20%;
+}
+
+.mail:hover{
+    color: #3457FF;
+}
+
+nav{
+    display: flex;
+    width: 1300px;  
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-right: 2em;
+}
+
+nav li{
+    padding-inline: 2em;
+    
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: larger;
+}
+
+.hire-me-btn{
+    margin: auto;
+    margin-right: 0;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+    border: 1px solid black;
+    background: linear-gradient(to right, #011eb2, #778dfa, #011eb2);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    padding: 0.75em 2em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-position 0.5s ease;
+}
+
+.hire-me-btn:hover{
+    background-position: 0 0;
+}
+
+.main{
+    color: white;
+}
+
+.main .first-section{
+    max-width: 1300px;
+    margin: 5em auto;
+    margin-top: 8em;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main .first-section-left{
+    width: 50%;
+    flex-direction: column;
+    color: white;
+}
+
+.main .first-section-left-text{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+} 
+
+.main .first-section-left-text h2{
+    font-size: 2.5em;
+    margin: -2% 0;
+}
+
+.main .first-section-left-text h1{
+    font-size: 4.125em;
+    margin: -2% 0;
+    background: linear-gradient(to right,#011eb2, #778dfa, #d5dcfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .first-section-left-text h3{
+    font-size: 1.25em;
+    margin: -2% 0;
+    font-weight: 500;
+    color: rgb(177, 175, 175);
+}
+
+.main .first-section-left-buttons{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.main .first-section-left-buttons button{
+    font-family: inherit;
+    margin: auto 1em;
+    background: transparent;
+    color:#3457FF;
+    border:1px solid #3457FF;
+    border-radius: 50%;
+    width: auto;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main .first-section-left-buttons button:hover{
+    background-color: #3457FF;
+    color: white;
+}
+
+.main .first-section-left-buttons .download{
+    border-radius: 30px;
+    width: 30%;
+    height: 50%;
+    font-size: larger;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main .first-section-left-buttons .download:hover{
+    background-color: #3457FF;
+    color: white;
+}
+
+.main .first-section-right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .first-section-right img{
+    width: 60%;
+    border-radius: 30px;
+    border: 1px solid #3457FF;
+    transform: rotate(5deg);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.main .first-section-right img:hover{
+    border: 3px solid #3457FF;
+    transform: rotate(0deg);
+}
+
+.aboutme-section{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutme-section .aboutme-title{
+    text-align: center;
+    font-size: 2em;
+    background: linear-gradient(to right,#011eb2, #d5dcfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aboutme-section .columns{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.aboutme-section .columns h1, h3{
+    color: white;
+}
+
+.aboutme-section .columns h2{
+    color: #3457FF;
+}
+
+.aboutme-section .columns .education{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.aboutme-section .columns .education .title{
+    text-align: center;
+    font-size: 50px;
+}
+
+.aboutme-section .columns .education .college, .high-school{
+    height: 50%;
+    background-color: #0c0e1b;
+    border-radius: 20px;
+    padding-inline: 2em;
+    margin-bottom: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.aboutme-section .columns .education .college:hover, .high-school:hover{
+    background-color: #3457FF;
+}
+
+.aboutme-section .columns .education .college:hover h2, .high-school:hover h2{
+    color: white;
+}
+
+.aboutme-section .columns .skills{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutme-section .columns .skills .title{
+    text-align: center;
+    font-size: 50px;
+}
+
+.aboutme-section .columns .skills .javascript, .reactjs, .angular, .html, .css{
+    height: 15%;
+    background-color: #0c0e1b;
+    border-radius: 20px;
+    padding-inline: 2em;
+    margin-bottom: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.aboutme-section .columns .skills .javascript:hover, .reactjs:hover, .angular:hover, .html:hover, .css:hover{
+    background-color: #3457FF;
+}
+
+.aboutme-section .columns .skills .javascript:hover h2, .reactjs:hover h2, .angular:hover h2, .html:hover h2, .css:hover h2{
+    color: white;
+}
+
+.projects{
+    background-color: #0c0e1b;
+    margin: 7em 0;
+}
+
+.projects .projects-section{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 4em;
+    color: white;
+}
+
+.projects .projects-section .title{
+    text-align: center;
+    font-size: 4em;
+    background: linear-gradient(to right,#011eb2, #d5dcfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5em;
+}
+
+.projects .pjs{
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .pjs .subtitle{
+    font-size: 3em;
+}
+
+.projects .university, .personal{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10em;
+    margin-bottom: 2em;
+}
+
+.projects .university .boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    width: 45%;
+}
+
+.projects .university .text h1{
+    margin-top: 0;
+}
+
+.projects .university .text{
+    width: 45%;
+}
+
+.projects .smartpark, .chromatica, .rickandmorty, .energy{
+    max-width: 100%;
+    background-color: #121528;
+    color: white;
+    border-radius: 20px;
+    padding: 0.5em 2em;
+    transition: background-color 0.3s ease;
+}
+
+.projects .university{
+    margin-bottom: 7em;
+}
+
+.projects h2{
+    color: #3457FF;
+}
+
+.projects .smartpark:hover, .chromatica:hover, .rickandmorty:hover, .energy:hover{
+    background-color: #3457FF;
+}
+
+.projects .smartpark:hover h2, .chromatica:hover h2, .rickandmorty:hover h2, .energy:hover h2{
+    color: white;
+}
+
+.projects .personal .boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    width: 45%;
+}
+
+.projects .personal .text{
+    width: 45%;
+}
+
+.projects .personal .text h1{
+    margin-top: 0%;
+}
+
+.projects .dictionary{
+    max-width: 100%;
+    background-color: #121528;
+    color: white;
+    border-radius: 20px;
+    padding: 0.5em 2em;
+    transition: background-color 0.3s ease;
+}
+
+.projects a{
+    display: block;
+    text-decoration: none;
+}
+
+.projects .dictionary:hover{
+    background-color: #3457FF;
+}
+
+.projects .dictionary:hover h2{
+    color: white;
+}
+
+.projects .personal{
+    margin-bottom: 7em;
+}
+
+.contact{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .left{
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 20px;
+    background-color: #121528;
+}
+
+.contact .text{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.contact h1{
+    font-size: 50px;
+    margin-bottom: 0;
+    background: linear-gradient(to right,#011eb2, #d5dcfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact p{
+    font-size: 20px;
+    margin-bottom: 1.5em;
+}
+
+.contact .formm{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form{
+    padding-left: 2em;
+    padding-right: 2em;
+    
+}
+
+.contact .first-and-last{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.contact .email-and-phone{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.contact input{
+    width: 100%;
+    padding: 0.75em 0;
+    border-radius: 10px;
+    background-color: black;
+    border:1px solid rgb(58, 58, 58);
+    text-indent: 1em;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.contact input:focus{
+    border: 1px solid #3457FF;
+}
+
+.contact .message{
+    display: flex; 
+    padding-bottom: 1em;
+}
+
+.contact .input-message{
+    width: 100%;
+    height: 12em;
+    padding: 1em 1em 1em 1em;
+    font-family: inherit;   
+    font-size: inherit;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: black;
+    border:1px solid rgb(58, 58, 58);
+    color: white;
+    outline: none;
+    resize: none;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact .input-message:focus{
+    border: 1px solid #3457FF;
+}
+
+.contact button{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    width: 30%;
+    margin-left: 2.250em;
+    padding: 1em 0;
+    margin-bottom: 3em;
+    border-radius: 10px;
+    border: 1px solid #121528;
+    background: linear-gradient(to right, #011eb2, #778dfa, #011eb2);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    cursor: pointer;
+    border-radius: 30px;
+    color: white;
+    transition: background-position 0.5s ease;
+}
+
+.contact button:hover{
+    background-position: 0 0;
+}
+
+.contact .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 47%;
+    color: white;
+}
+
+.contact .right .phone, .email, .address{
+    display: flex;
+    align-items: center;
+}
+
+.contact .right i{
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to right,#011eb2, #4769ff);
+    margin-right: 1em;
+    margin-left: 2em;
+}
+
+.contact .right h3{
+    font-weight: normal;
+    margin-bottom: -1em;
+}
+
+.contact{
+    margin-bottom: 7em;
+}
+
+footer{
+    background-color: #0c0e1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+}
+
+footer img{
+    width: 100px;
+}
+
+footer p{
+    font-size: 1.125em;
+    color: rgb(177, 175, 175);
+}
+
+footer p span {
+    color: white;
+    font-weight: bold;
+}
