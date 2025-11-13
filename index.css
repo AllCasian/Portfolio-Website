@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 180px;
 }
 
 body{
@@ -11,10 +12,20 @@ body{
     overflow-x: hidden;
 }
 
+#navbar {
+    position: sticky;
+    top: 0;            
+    z-index: 1000;    
+    background-color: #000;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar-container{
     top: 0;
     color: white;
-    max-width: fit-content;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -24,12 +35,12 @@ body{
 }
 
 .logo{
-    width: 6%;
-    height: 6%;
+    width: 50%;
+   
 }
 
 .mail{
-    margin: auto 2em;
+    margin: auto 1em;
     text-decoration: none;
     font-weight: 800;
     font-size: larger;
@@ -44,10 +55,12 @@ body{
 
 nav{
     display: flex;
-    width: 1300px;  
+    width: 90%;  
+    flex-wrap: wrap;
 }
 
 nav ul{
+    margin-left: -4em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,7 +71,6 @@ nav ul{
 
 nav li{
     padding-inline: 2em;
-    
 }
 
 nav a{
@@ -90,11 +102,29 @@ nav a{
     background-position: 0 0;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.hamburger div {
+    display: flex;
+    width: 60%;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease;
+    align-items: center;
+}
+
 .main{
     color: white;
 }
 
 .main .first-section{
+    width: 100%;
     max-width: 1300px;
     margin: 5em auto;
     margin-top: 8em;
@@ -139,7 +169,9 @@ nav a{
 .main .first-section-left-buttons{
     height: 20%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
    
 }
 
@@ -164,7 +196,7 @@ nav a{
 
 .main .first-section-left-buttons .download{
     border-radius: 30px;
-    width: 30%;
+    width: 78%;
     height: 50%;
     font-size: larger;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -183,6 +215,7 @@ nav a{
 
 .main .first-section-right img{
     width: 60%;
+    max-width: 100%;
     border-radius: 30px;
     border: 1px solid #3457FF;
     transform: rotate(5deg);
@@ -236,7 +269,8 @@ nav a{
     font-size: 50px;
 }
 
-.aboutme-section .columns .education .college, .high-school{
+.aboutme-section .columns .education .college, 
+.aboutme-section .columns .education .high-school{
     height: 50%;
     background-color: #0c0e1b;
     border-radius: 20px;
@@ -245,11 +279,13 @@ nav a{
     transition: background-color 0.3s ease;
 }
 
-.aboutme-section .columns .education .college:hover, .high-school:hover{
+.aboutme-section .columns .education .college:hover, 
+.aboutme-section .columns .education .high-school:hover{
     background-color: #3457FF;
 }
 
-.aboutme-section .columns .education .college:hover h2, .high-school:hover h2{
+.aboutme-section .columns .education .college:hover h2,
+.aboutme-section .columns .education .high-school:hover h2{
     color: white;
 }
 
@@ -264,7 +300,11 @@ nav a{
     font-size: 50px;
 }
 
-.aboutme-section .columns .skills .javascript, .reactjs, .angular, .html, .css{
+.aboutme-section .columns .skills .javascript, 
+.aboutme-section .columns .skills .reactjs,
+.aboutme-section .columns .skills .angular, 
+.aboutme-section .columns .skills .html, 
+.aboutme-section .columns .skills .css{
     height: 15%;
     background-color: #0c0e1b;
     border-radius: 20px;
@@ -273,11 +313,19 @@ nav a{
     transition: background-color 0.3s ease;
 }
 
-.aboutme-section .columns .skills .javascript:hover, .reactjs:hover, .angular:hover, .html:hover, .css:hover{
+.aboutme-section .columns .skills .javascript:hover,
+.aboutme-section .columns .skills .reactjs:hover,
+.aboutme-section .columns .skills .angular:hover,
+.aboutme-section .columns .skills .html:hover,
+.aboutme-section .columns .skills .css:hover{
     background-color: #3457FF;
 }
 
-.aboutme-section .columns .skills .javascript:hover h2, .reactjs:hover h2, .angular:hover h2, .html:hover h2, .css:hover h2{
+.aboutme-section .columns .skills .javascript:hover h2,
+.aboutme-section .columns .skills .reactjs:hover h2,
+.aboutme-section .columns .skills .angular:hover h2,
+.aboutme-section .columns .skills .html:hover h2,
+.aboutme-section .columns .skills .css:hover h2{
     color: white;
 }
 
@@ -313,8 +361,10 @@ nav a{
 
 .projects .university, .personal{
     display: flex;
-    justify-content: space-between;
-    padding-inline: 10em;
+    justify-content: space-around;
+    width: 70%;
+    padding-inline: 0;
+    margin: 0 auto;
     margin-bottom: 2em;
 }
 
@@ -334,13 +384,16 @@ nav a{
     width: 45%;
 }
 
-.projects .smartpark, .chromatica, .rickandmorty, .energy{
+.projects .smartpark,
+.projects .chromatica,
+.projects .rickandmorty,
+.projects .energy{
     max-width: 100%;
     background-color: #121528;
     color: white;
     border-radius: 20px;
     padding: 0.5em 2em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease-out;
 }
 
 .projects .university{
@@ -351,11 +404,17 @@ nav a{
     color: #3457FF;
 }
 
-.projects .smartpark:hover, .chromatica:hover, .rickandmorty:hover, .energy:hover{
+.projects .smartpark:hover,
+.projects .chromatica:hover,
+.projects .rickandmorty:hover,
+.projects .energy:hover{
     background-color: #3457FF;
 }
 
-.projects .smartpark:hover h2, .chromatica:hover h2, .rickandmorty:hover h2, .energy:hover h2{
+.projects .smartpark:hover h2,
+.projects .chromatica:hover h2,
+.projects .rickandmorty:hover h2,
+.projects .energy:hover h2{
     color: white;
 }
 
@@ -510,7 +569,6 @@ nav a{
     font-size: inherit;
     font-weight: bold;
     width: 30%;
-    margin-left: 2.250em;
     padding: 1em 0;
     margin-bottom: 3em;
     border-radius: 10px;
@@ -585,4 +643,334 @@ footer p{
 footer p span {
     color: white;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar-container {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+        overflow:hidden;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav .mail {
+        text-align: center;
+        margin: 0;
+    }
+
+    nav .hire-me-btn {
+        margin: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    nav li {
+       align-items: center;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    nav ul, .hire-me-btn, .mail {
+        display: none;
+    }
+
+    nav .logo-hamb{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+    } 
+
+    nav .logo-hamb .logo-a {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+    }
+
+    .hamburger div {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    nav.active {
+        align-items: center;
+        margin: 0;
+    }
+
+    nav.active ul,
+    nav.active .hire-me-btn,
+    nav.active .mail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav.active .mail {
+        border-bottom: 1px solid grey;
+        margin-bottom: 15px;
+    }
+
+    nav.active ul li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid grey;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.active .hire-me-btn {
+        margin-top: 0.5em;
+        width: 40%;
+        height: 40px;
+    }
+
+    .main {
+        overflow:hidden;
+    }
+
+    .main .first-section {
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .main .first-section-left {
+        order: 2;
+        width: 100%;
+    }
+
+    .main .first-section-left-text {
+        width: 100%;
+        margin: 0;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .main .first-section-left-text h1 {
+        font-size: 4.5em;
+        margin-bottom: 10px;
+        line-height: 1;
+    }
+
+    .main .first-section-left-text h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    .main .first-section-left-buttons {
+        gap: 1em;
+    }
+
+    .main .first-section-left-buttons .download {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        font-size: 25px;
+    }
+
+    .main .first-section-left-buttons button:not(.download){
+        width: 40px;
+        height: 40px;
+    }
+
+    .main .first-section-left-buttons button:not(.download) i{
+        font-size: 1.75em;
+    }
+
+    .main .first-section-left-buttons a:first-child {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .main .first-section-right {
+        width: 100%;
+    }
+
+    .main .first-section-right img {
+        width: 80%;
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+
+    .aboutme-section {
+        margin-bottom: 2.5em;
+        overflow: hidden;
+    }
+
+    .aboutme-section .columns {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -3em;
+    }
+
+    .aboutme-section .columns .education,
+    .aboutme-section .columns .skills{
+        width: 90%;
+    }
+
+    .aboutme-section .columns .education .title,
+    .aboutme-section .columns .skills .title {
+        font-size: 2.5em;
+    }
+
+    .projects {
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    .projects .projects-section {
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .projects .projects-section .pjs {
+        width: 100%;
+    }
+
+    .projects .projects-section .pjs .university,
+    .projects .projects-section .pjs .personal {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: -2em;
+    }
+
+    .projects .projects-section .pjs .personal {
+        margin-bottom: 2em;
+    }
+
+    .projects .projects-section .pjs .university .text,
+    .projects .projects-section .pjs .university .boxes {
+        width: 90%;
+        text-align: center;
+    }
+
+    .projects .projects-section .pjs .personal .boxes{
+        order: 2;
+    }
+
+    .projects .projects-section .pjs .personal .text,
+    .projects .projects-section .pjs .personal .boxes {
+        width: 90%;
+        text-align: center;
+    }
+
+    .projects .projects-section .pjs .university .subtitle,
+    .projects .projects-section .pjs .personal .subtitle {
+        font-size: 2.5em;
+    }
+
+    .contact {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 3em;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    .contact .left,
+    .contact .right{
+        width: 100%;
+        padding-bottom: 2em;
+    }
+
+    .contact .left .text{
+        text-align: center;
+    }
+
+    .contact .left .formm form {
+        flex-direction: row;
+    }
+
+    .contact .left .formm form div {
+        width: 100%;
+        flex-direction: column;
+    } 
+
+    .contact .left .formm form div textarea {
+        width: 100%;
+    }
+
+    .contact .left button {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact .right {
+        margin-top: 2em;
+    }
+
+    .contact .right i {
+        margin: 0 auto;
+    }
+
+    .contact .right .phone .round,
+    .contact .right .email .round,
+    .contact .right .address .round {
+        margin-bottom: -1em;
+    }
+
+    .contact .right h3 {
+        text-align: center;
+    }
+
+    .contact .right .phone,
+    .contact .right .email,
+    .contact .right .address {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer img {
+        width: 70px;
+    }
 }
