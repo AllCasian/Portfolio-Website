@@ -246,14 +246,20 @@ nav a{
 .aboutme-section .columns{
     display: flex;
     justify-content: space-between;
-    
 }
 
-.aboutme-section .columns h1, h3{
+.aboutme-section .work-exp{
+    display: flex;
+    justify-content: center;
+}
+
+.aboutme-section .columns h1, h3,
+.aboutme-section .work-exp h1, h3{
     color: white;
 }
 
-.aboutme-section .columns h2{
+.aboutme-section .columns h2,
+.aboutme-section .work-exp h2{
     color: #3457FF;
 }
 
@@ -264,13 +270,23 @@ nav a{
     
 }
 
-.aboutme-section .columns .education .title{
+.aboutme-section .work-exp .work{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.aboutme-section .columns .education .title,
+.aboutme-section .work-exp .work .title{
     text-align: center;
     font-size: 50px;
 }
 
 .aboutme-section .columns .education .college, 
-.aboutme-section .columns .education .high-school{
+.aboutme-section .columns .education .high-school,
+.aboutme-section .work-exp .work .core,
+.aboutme-section .work-exp .work .eaton{
     height: 50%;
     background-color: #0c0e1b;
     border-radius: 20px;
@@ -280,12 +296,16 @@ nav a{
 }
 
 .aboutme-section .columns .education .college:hover, 
-.aboutme-section .columns .education .high-school:hover{
+.aboutme-section .columns .education .high-school:hover,
+.aboutme-section .work-exp .work .core:hover,
+.aboutme-section .work-exp .work .eaton:hover{
     background-color: #3457FF;
 }
 
 .aboutme-section .columns .education .college:hover h2,
-.aboutme-section .columns .education .high-school:hover h2{
+.aboutme-section .columns .education .high-school:hover h2,
+.aboutme-section .work-exp .work .core:hover h2,
+.aboutme-section .work-exp .work .eaton:hover h2{
     color: white;
 }
 
@@ -645,6 +665,12 @@ footer p span {
     font-weight: bold;
 }
 
+@media (min-width: 1200px) {
+    body{
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
 
     body {
@@ -777,7 +803,7 @@ footer p span {
 
     .main .first-section-left {
         order: 2;
-        width: 100%;
+        width: 90%;
     }
 
     .main .first-section-left-text {
@@ -790,6 +816,7 @@ footer p span {
     .main .first-section-left-text h1 {
         font-size: 4.5em;
         margin-bottom: 10px;
+        padding-bottom: 10px;
         line-height: 1;
     }
 
@@ -846,12 +873,14 @@ footer p span {
     }
 
     .aboutme-section .columns .education,
-    .aboutme-section .columns .skills{
+    .aboutme-section .columns .skills,
+    .aboutme-section .work-exp .work{
         width: 90%;
     }
 
     .aboutme-section .columns .education .title,
-    .aboutme-section .columns .skills .title {
+    .aboutme-section .columns .skills .title,
+    .aboutme-section .work-exp .work .title {
         font-size: 2.5em;
     }
 
