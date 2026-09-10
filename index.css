@@ -285,6 +285,7 @@ nav a{
 
 .aboutme-section .columns .education .college, 
 .aboutme-section .columns .education .high-school,
+.aboutme-section .work-exp .work .endava,
 .aboutme-section .work-exp .work .core,
 .aboutme-section .work-exp .work .eaton{
     height: 50%;
@@ -297,6 +298,7 @@ nav a{
 
 .aboutme-section .columns .education .college:hover, 
 .aboutme-section .columns .education .high-school:hover,
+.aboutme-section .work-exp .work .endava:hover,
 .aboutme-section .work-exp .work .core:hover,
 .aboutme-section .work-exp .work .eaton:hover{
     background-color: #3457FF;
@@ -304,6 +306,7 @@ nav a{
 
 .aboutme-section .columns .education .college:hover h2,
 .aboutme-section .columns .education .high-school:hover h2,
+.aboutme-section .work-exp .work .endava:hover h2,
 .aboutme-section .work-exp .work .core:hover h2,
 .aboutme-section .work-exp .work .eaton:hover h2{
     color: white;
